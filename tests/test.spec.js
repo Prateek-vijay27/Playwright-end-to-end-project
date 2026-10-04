@@ -3,14 +3,23 @@
 import { test, expect } from "../fixtures/fixture"
 import { getCredentials } from "../utils/credentials.js"
 
-test("login", async ({page, loginpage})=>{
+// test("login", async ({page, loginpage})=>{
 
-await page.goto("/login")
+// await page.goto("/login")
 
-await loginpage.loginToApplication(getCredentials("admin"))
+// await loginpage.loginToApplication(getCredentials("admin"))
 
-await expect(page.getByRole("heading", {name: "Learn Automation Courses"})).toBeVisible()
+// await expect(page.getByRole("heading", {name: "Learn Automation Courses"})).toBeVisible()
 
+// })
+
+test("testing setup", async({page})=>{
+
+    await page.goto("/cart")
+
+    await expect(page.getByRole("heading", {name: "Total Price:"})).toBeVisible()
+
+    await expect(page.getByRole("button", {name: "Shop Now"})).toBeVisible()
 })
 
 

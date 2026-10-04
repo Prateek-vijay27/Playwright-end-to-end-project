@@ -42,6 +42,4 @@ cross-env makes the TEST_ENV=... prefix work on Windows too.
 Inside package.json scripts, npx isn't needed. In a raw terminal it is.
 Pass extra arguments with npm run test:qa -- --headed.
 
-
-
 */ 

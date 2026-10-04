@@ -1,0 +1,21 @@
+
+1) Create Pages - BasePage and ChildPages
+2) create fixtures
+3) how to run same test on diffrent environments - TEST_ENV is set → playwright.config.js loads → loadEnv runs → process.env is filled → 
+workers start and inherit it → tests call getCredentials() → login.
+File sequence - playwright.config.js -> utils/env.js (load the env and fill process.env with values)-> 
+playwright.config.js(set base_url) -> 
+test script -> utils/credentials.js 
+4) How/where to store credentials in local system - env folder -> .env.qa
+
+5) How to use storageState? -> cookie + localStorage
+
+Step 1: Create the setup file tests/auth.setup.js
+Step 2: Add the projects and dependencies in playwright.config.js
+Step 3: Write and run tests without any login code ( as login is handled by setup file)
+Step 4: check that a .auth folder is created and agent.json is created inside it and contain the token data
+
+Flow -> auth.setup.js (logs in) → saves agent.json → the config makes every browser project load that file → tests start logged in.
+
+
+6) 

@@ -9,4 +9,4 @@ node_modules/
 env/.env.dev
 env/.env.qa
 env/.env.staging
-
+/.auth
